@@ -1,25 +1,35 @@
 body {
-	background-color: #d0d0d0; 
+	background-color: #ededed;
 }
 
 aside {
 	float: right;
-	width: 25%;
-	height: 70%;
+	border: 2px solid gray;
+	width: 24%;
+	background-color: #bebebe;
+	height: 100%;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 nav {
 	float: left;
-	margin-left: 10px;
 	width: 25%;
-	height: 70%;
+	border: 2px solid gray;
+	background-color: #bebebe;
+	height: 100%;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 footer {
-	width: 100%;
+	width: 98.6%;
 	position: absolute;
 	bottom: 0;
 	display: table;
+	border-top: 3px solid gray;
+	border-left: 2px solid gray;
+	border-right: 2px solid gray;
 }
 
 table {
@@ -27,37 +37,57 @@ table {
 }
 
 #footerTab {
-	table-layout: fixed;
-	border: none;
 	width: 100%;
+	border: none;
+	background-color: #bebebe;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
 
-#chatTable {
-	border: 1px solid black;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	display: table-cell;
+.sideBlock {
+	width: 25%;
+	background-color: #bebebe;
 }
 
 #musicQueue {
+	table-layout: fixed;
+	border: none;
 	width: 100%;
 	text-align: center;
-	display: table-cell;
+	background-color:#bebebe;
 }
 
 #musicQueue td {
-	border: 1px solid black
+	background-color: #817e7e;
+	border: 1px solid #4e4b4b; 
 }
 
 #userTable{
-	width: 100%;	
-	height: 100%;
-	background-color: #eeeeee;
+	width: 100%;
+	border: 1px solid black;
+	text-align: center;
+}
+
+#userTable td {
+	border: 1px solid black;
+	background-color: #bebebe;
 }
 
 #musicTable {
+	table-layout: fixed;
 	width: 100%;
-	height: 100%;
 	background-color: #eeeeee;
+}
+
+#userTable #player {
+	background-color: #ff6600;
+}
+
+.moveUp {
+	
+	width: 15px;	
+}
+
+.dMusic {
+	width: 15px;
 }

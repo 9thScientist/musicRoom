@@ -1,9 +1,11 @@
 <html>
 	<head>
 		<link href="index.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="index.js"> </script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
 
-	<body>
+	<body onload="updateQueue()">
 
 		<header>
 				
@@ -15,6 +17,10 @@
 			<table id="userTable">
 				<tr> <td> Amelia </td>	</tr>
 				<tr> <td> Jorge </td> </tr>
+				<tr> <td> Júlio </td> </tr>
+				<tr> <td id="player"> Célia</td> </tr>
+				<tr> <td> Maria</td> </tr>
+				<tr> <td> Sara </td> </tr>
 			</table>
 		
 		</nav>
@@ -24,28 +30,22 @@
 			<center>	<h4> Musicas </h4> </center>
 
 			<table id="musicTable">
-				<tr> <td> Vivaldi Four Seasons </td> </tr>
-				<tr> <td> Under Pressure </td> </tr>
-				<tr> <td> Friday </td> </tr>
+				<tr onclick="addToQueue(this.innerHTML) "> <td> Vivaldi Four Seasons </td> </tr>
+				<tr onclick="addToQueue(this.innerHTML) "> <td> Under Pressure </td> </tr>
+				<tr onclick="addToQueue(this.innerHTML) "> <td> Friday </td> </tr>
 			</table>
 				
 		</aside>
 
-		<footer>
+		<footer > 
 
 			<table id="footerTab">
 				<tr> 
-					<td> 
-						<table id="chatTable">
-							<tr> <td> CHAT </td> </tr>
-						</table>  
-					</td>
-
 					<td>
 						<table id="musicQueue">
-							<tr> <td> MUSICA 1 </td> </tr>
-							<tr> <td> MUSICA 2 </td> </tr>
-							<tr> <td> MUSICA 3 </td> </tr>
+							<tr> <td class="moveUp" onClick="queueSwapUp(0)">↑</td> <td id="queue1"> </td> <td class="dMusic"> X </td> </tr>
+							<tr> <td class="moveUp" onClick="queueSwapUp(1)">↑</td> <td id="queue2"> </td> <td class="dMusic"> X </td> </tr>
+							<tr> <td class="moveUp" onClick="queueSwapUp(2)">↑</td> <td id="queue3"> </td> <td class="dMusic"> X </td> </tr>
 						</table>
 					</td>
 				</tr>
