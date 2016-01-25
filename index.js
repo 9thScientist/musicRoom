@@ -1,5 +1,11 @@
 
 var queue = [];
+var queueSP = 0;
+const vazio = "";
+
+queue[0] = vazio;
+queue[1] = vazio;
+queue[2] = vazio;
 
 function updateQueue () {
 
@@ -10,8 +16,9 @@ function updateQueue () {
 
 function addToQueue( music ) {
 
-	if (queue.length < 3) {
-		queue.push(music);	
+	if (queueSP < 3) {
+		queue[queueSP]=music;	
+		queueSP++;
 		updateQueue();
 	}	
 }
@@ -26,4 +33,12 @@ function queueSwapUp ( oid ) {
 	}
 
 	updateQueue();
+}
+
+function deQueue (id) {
+	
+	queue.splice( id, 1);
+	queueSP--;
+	queue[2] = vazio;
+	updateQueue ();
 }

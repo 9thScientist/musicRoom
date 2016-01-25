@@ -36,6 +36,11 @@ table {
 	border: 1px solid black;
 }
 
+audio {
+	width: 100%;
+
+}
+
 #footerTab {
 	width: 100%;
 	border: none;
@@ -44,10 +49,6 @@ table {
 	padding-bottom: 4px;
 }
 
-.sideBlock {
-	width: 25%;
-	background-color: #bebebe;
-}
 
 #musicQueue {
 	table-layout: fixed;
@@ -79,8 +80,11 @@ table {
 	background-color: #eeeeee;
 }
 
-#userTable #player {
+#userTable #playing {
 	background-color: #ff6600;
+}
+
+#player {
 }
 
 .moveUp {
