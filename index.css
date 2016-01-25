@@ -1,0 +1,63 @@
+body {
+	background-color: #d0d0d0; 
+}
+
+aside {
+	float: right;
+	width: 25%;
+	height: 70%;
+}
+
+nav {
+	float: left;
+	margin-left: 10px;
+	width: 25%;
+	height: 70%;
+}
+
+footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	display: table;
+}
+
+table {
+	border: 1px solid black;
+}
+
+#footerTab {
+	table-layout: fixed;
+	border: none;
+	width: 100%;
+}
+
+#chatTable {
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: table-cell;
+}
+
+#musicQueue {
+	width: 100%;
+	text-align: center;
+	display: table-cell;
+}
+
+#musicQueue td {
+	border: 1px solid black
+}
+
+#userTable{
+	width: 100%;	
+	height: 100%;
+	background-color: #eeeeee;
+}
+
+#musicTable {
+	width: 100%;
+	height: 100%;
+	background-color: #eeeeee;
+}
