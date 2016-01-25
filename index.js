@@ -12,6 +12,7 @@ function updateQueue () {
 	document.getElementById("queue1").innerHTML = queue[0];
 	document.getElementById("queue2").innerHTML = queue[1];
 	document.getElementById("queue3").innerHTML = queue[2];
+	hide();
 }
 
 function addToQueue( music ) {
@@ -41,4 +42,32 @@ function deQueue (id) {
 	queueSP--;
 	queue[2] = vazio;
 	updateQueue ();
+}
+
+function hide(){
+	if(document.getElementById("queue1").innerHTML == ""){
+		document.getElementById("moveUp1").style.visibility = "hidden";
+		document.getElementById("close1").style.visibility = "hidden";
+	}
+	else{
+		document.getElementById("moveUp1").style.visibility = "visible";
+		document.getElementById("close1").style.visibility = "visible";
+	}
+
+	if(document.getElementById("queue2").innerHTML == ""){
+		document.getElementById("moveUp2").style.visibility = "hidden";
+		document.getElementById("close2").style.visibility = "hidden";
+	}
+	else{
+		document.getElementById("moveUp2").style.visibility = "visible";
+		document.getElementById("close2").style.visibility = "visible";
+	}
+	if(document.getElementById("queue3").innerHTML == ""){
+		document.getElementById("moveUp3").style.visibility = "hidden";
+		document.getElementById("close3").style.visibility = "hidden";
+	}
+	else{
+		document.getElementById("moveUp3").style.visibility = "visible";
+		document.getElementById("close3").style.visibility = "visible";
+	}
 }

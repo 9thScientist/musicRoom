@@ -18,7 +18,7 @@
 				<tr> <td> Amelia </td>	</tr>
 				<tr> <td> Jorge </td> </tr>
 				<tr> <td> Dinis </td> </tr>
-				<tr> <td id="playing"> Célia</td> </tr>
+				<tr> <td id="playing"> Rita</td> </tr>
 				<tr> <td> Maria</td> </tr>
 				<tr> <td> Sara </td> </tr>
 			</table>
@@ -52,19 +52,19 @@
 					<td>
 						<table id="musicQueue">
 							<tr> 
-								<td class="moveUp" onClick="queueSwapUp(0)">↑</td> 
+								<td class="moveUp"> <button type="button" id="moveUp1" onclick="queueSwapUp(0)">↑</button> </td>  
 								<td id="queue1"> </td> 
-								<td class="dMusic"> <button type="button" onclick="deQueue(0)">x</button> </td> 
+								<td class="dMusic"> <button type="button" id="close1" onclick="deQueue(0)">x</button> </td> 
 							</tr>
 							<tr> 
-								<td class="moveUp" onClick="queueSwapUp(1)">↑</td> 
+								<td class="moveUp"> <button type="button" id="moveUp2" onclick="queueSwapUp(1)">↑</button> </td> 
 								<td id="queue2"> </td> 
-								<td class="dMusic"> <button type="button" onclick="deQueue(1)">x</button> </td> 
+								<td class="dMusic"> <button type="button" id="close2" onclick="deQueue(1)">x</button> </td> 
 							</tr>
 							<tr> 
-								<td class="moveUp" onClick="queueSwapUp(2)">↑</td> 
+								<td class="moveUp"> <button type="button" id="moveUp3" onclick="queueSwapUp(2)">↑</button> </td>  
 								<td id="queue3"> </td> 
-								<td class="dMusic"> <button type="button" onclick="deQueue(2)">x</button> </td> 
+								<td class="dMusic"> <button type="button" id="close3" onclick="deQueue(2)">x</button> </td> 
 							</tr>
 						</table>
 					</td>
