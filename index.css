@@ -95,3 +95,9 @@ audio {
 .dMusic {
 	width: 30px;
 }
+
+.musicButtons{
+	border: none;
+	background-color: #eeeeee;
+	width: 100%;
+}

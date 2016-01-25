@@ -2,6 +2,7 @@
 var queue = [];
 var queueSP = 0;
 const vazio = "";
+const maxQueue = 3;
 
 queue[0] = vazio;
 queue[1] = vazio;
@@ -17,11 +18,12 @@ function updateQueue () {
 
 function addToQueue( music ) {
 
-	if (queueSP < 3) {
+	if (queueSP < maxQueue) {
 		queue[queueSP]=music;	
 		queueSP++;
 		updateQueue();
-	}	
+	}
+
 }
 
 function queueSwapUp ( oid ) {
@@ -46,11 +48,9 @@ function deQueue (id) {
 
 function hide(){
 	if(document.getElementById("queue1").innerHTML == ""){
-		document.getElementById("moveUp1").style.visibility = "hidden";
 		document.getElementById("close1").style.visibility = "hidden";
 	}
 	else{
-		document.getElementById("moveUp1").style.visibility = "visible";
 		document.getElementById("close1").style.visibility = "visible";
 	}
 

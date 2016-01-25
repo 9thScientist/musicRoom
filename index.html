@@ -30,9 +30,13 @@
 			<center>	<h4> Musicas </h4> </center>
 
 			<table id="musicTable">
-				<tr onclick="addToQueue(this.innerHTML) "> <td> Vivaldi Four Seasons </td> </tr>
-				<tr onclick="addToQueue(this.innerHTML) "> <td> Under Pressure </td> </tr>
-				<tr onclick="addToQueue(this.innerHTML) "> <td> Friday </td> </tr>
+				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Vivaldi Four Seasons</button></td> </tr>
+				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Under Pressure</button></td> </tr>
+				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Fear of the Dark</button></td> </tr>
+				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Friday</button></td> </tr>
+				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Lose Yourself</button></td> </tr>
+				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">High Hopes</button></td> </tr>
+				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Os Maridos das outras</button></td> </tr>
 			</table>
 				
 		</aside>
@@ -52,7 +56,7 @@
 					<td>
 						<table id="musicQueue">
 							<tr> 
-								<td class="moveUp"> <button type="button" id="moveUp1" onclick="queueSwapUp(0)">↑</button> </td>  
+								<td class="moveUp"> </td>  
 								<td id="queue1"> </td> 
 								<td class="dMusic"> <button type="button" id="close1" onclick="deQueue(0)">x</button> </td> 
 							</tr>
