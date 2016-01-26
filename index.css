@@ -1,5 +1,6 @@
 body {
 	background-color: #ededed;
+	font-family: Arial;
 }
 
 aside {
@@ -68,12 +69,14 @@ audio {
 #userTable{
 	width: 100%;
 	border: 1px solid black;
+	background-color: #eeeeee;
 	text-align: center;
 }
 
 #userTable td {
-	border: 1px solid black;
-	background-color: #bebebe;
+	/* border: 1px solid black; */
+	border: none;
+	background-color: #eeeeee;
 }
 
 #musicTable {
@@ -83,7 +86,9 @@ audio {
 }
 
 #userTable #playing {
-	background-color: #ff6600;
+/*	background-color: #ff6600; */
+	color: #ff6600;
+	font-weight: bold;
 }
 
 .moveUp {
@@ -103,5 +108,8 @@ audio {
 
 .musicButtons:hover{
 	background-color: #bebebe;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> d82302f4eba534c5d43effaaa4d9895da0d6218d
 }
