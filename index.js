@@ -71,3 +71,11 @@ function hide(){
 		document.getElementById("close3").style.visibility = "visible";
 	}
 }
+
+function introName(){
+	var nome = prompt("Username:");
+	if(nome!=undefined){ 
+		document.getElementById("welcomeMsg").innerHTML = "Welcome "+ nome + "!";
+	}
+
+}

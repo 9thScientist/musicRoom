@@ -5,11 +5,13 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
 
-	<body onload="updateQueue()">
+	<body onload="updateQueue();introName()">
+
 
 		<header>
 				
 		</header>
+
 
 		<nav>
 			<center> <h2> Online Users</h2> </center>
@@ -27,7 +29,7 @@
 
 		<aside>
 
-			<center>	<h2> Musicas </h2> </center>
+			<center>	<h2> Songs </h2> </center>
 
 			<table id="musicTable">
 				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Vivaldi Four Seasons</button></td> </tr>
@@ -41,10 +43,13 @@
 				
 		</aside>
 
-		<audio controls>
-				<source src="" />
-		</audio>
-
+		<section>
+			<center><p id="welcomeMsg"></p></center>
+			<audio controls>
+					<source src="" />
+			</audio>
+		</section>
+		
 		<footer > 
 
 			<table id="footerTab">
