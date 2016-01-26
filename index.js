@@ -73,9 +73,12 @@ function hide(){
 }
 
 function introName(){
-	var nome = prompt("Username:");
-	if(nome!=undefined){ 
-		document.getElementById("welcomeMsg").innerHTML = "Welcome "+ nome + "!";
+	var name = prompt("Username:");
+	if(name!=undefined){ 
+		document.getElementById("welcomeMsg").innerHTML = name;
+	}
+	else{
+		window.location="http://www.google.com";
 	}
 
 }
