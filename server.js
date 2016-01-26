@@ -13,7 +13,8 @@ app.set('view engine', 'ejs');
 var onUsers = ["Joana", "Jorge"];
 
 app.get('/', function(req, res) {
-	res.sendFile('views/pages/index.html', {root: __dirname});
+	res.sendFile(__dirname + '/views/pages/index.html');
+
 });
 
 app.post('/login', function(req, res) {
