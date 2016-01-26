@@ -16,9 +16,9 @@ app.get('/', function(req, res) {
 });
 
 app.post('/login', function(req, res) {
-	res.render ('pages/main', {onUsers});
-	
 	onUsers.push(req.body.username);
+	res.render ('pages/main', {onUsers});
+
 	console.log (req.body.username + ' connected.');
 });
 
