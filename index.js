@@ -72,6 +72,7 @@ function hide(){
 	}
 }
 
+/*
 function introName(){
 	var name = prompt("Username:");
 	if(name!=undefined){ 
@@ -81,4 +82,4 @@ function introName(){
 		window.location="index.html";
 	}
 
-}
+} */
