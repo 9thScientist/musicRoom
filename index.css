@@ -37,8 +37,10 @@ table {
 }
 
 audio {
-	width: 100%;
-
+	width: 40%;
+	position: relative;
+	top: 525px;
+	left: 5%;
 }
 
 #footerTab {
@@ -82,9 +84,6 @@ audio {
 
 #userTable #playing {
 	background-color: #ff6600;
-}
-
-#player {
 }
 
 .moveUp {
