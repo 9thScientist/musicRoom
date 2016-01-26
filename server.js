@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var http = require('http').Server(app);
 
 var urlencodedParser = bodyParser.urlencoded({extended: true});
 
@@ -12,7 +13,8 @@ app.use(express.static(__dirname));
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
-	res.sendFile('views/pages/index.html', {root: __dirname});
+	res.sendFile(__dirname + '/views/pages/index.html');
+
 });
 
 app.post('/login', function(req, res) {
@@ -21,6 +23,8 @@ app.post('/login', function(req, res) {
 
 	console.log (req.body.username + ' connected.');
 });
+
+
 
 app.listen(3000, function() {
 	console.log('Connected on port 3000.');
