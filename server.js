@@ -4,15 +4,19 @@ var app = express();
 
 var urlencodedParser = bodyParser.urlencoded({extended: true});
 
+var onUsers = [];
+
 app.use(urlencodedParser);
 app.use(express.static(__dirname));
 
 app.get('/', function(req, res) {
-	res.sendFile('index.html', {root: __dirname});
+	res.sendFile('./views/pages/index.html', {root: __dirname});
 });
 
 app.post('/login', function(req, res) {
-	res.sendFile('main.html', {root: __dirname});
+	res.sendFile('./views/pages/main.html', {root: __dirname});
+	
+	onUsers.push(req.body.username);
 	console.log (req.body.username + ' connected.');
 });
 
