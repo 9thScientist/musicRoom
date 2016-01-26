@@ -4,7 +4,7 @@ var app = express();
 
 var urlencodedParser = bodyParser.urlencoded({extended: true});
 
-var onUsers = [];
+var onUsers = ["Joana", "Jorge"];
 
 app.use(urlencodedParser);
 app.use(express.static(__dirname));
@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/login', function(req, res) {
-	res.render ('pages/main');
+	res.render ('pages/main', {onUsers});
 	
 	onUsers.push(req.body.username);
 	console.log (req.body.username + ' connected.');
