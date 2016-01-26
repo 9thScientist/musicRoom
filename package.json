@@ -1,0 +1,24 @@
+{
+  "name": "musicroom",
+  "version": "1.0.0",
+  "description": "Share music with others",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9thScientist/musicRoom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/9thScientist/musicRoom/issues"
+  },
+  "homepage": "https://github.com/9thScientist/musicRoom#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4"
+  }
+}

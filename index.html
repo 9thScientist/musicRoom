@@ -1,81 +1,12 @@
 <html>
+
 	<head>
-		<link href="index.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="index.js"> </script>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
 
-	<body onload="updateQueue();introName()">
-
-
-		<header>
-				
-		</header>
-
-
-		<nav>
-			<center> <h2> Online Users</h2> </center>
-		
-			<table id="userTable">
-				<tr> <td> Amelia </td>	</tr>
-				<tr> <td> Jorge </td> </tr>
-				<tr> <td> Dinis </td> </tr>
-				<tr> <td id="playing"> Rita</td> </tr>
-				<tr> <td> Maria</td> </tr>
-				<tr> <td> Sara </td> </tr>
-			</table>
-		
-		</nav>
-
-		<aside>
-
-			<center>	<h2> Songs </h2> </center>
-
-			<table id="musicTable">
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Vivaldi Four Seasons</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Under Pressure</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Fear of the Dark</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Friday</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Lose Yourself</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">High Hopes</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Os Maridos das outras</button></td> </tr>
-			</table>
-				
-		</aside>
-
-		<section>
-			<center><p id="welcomeMsg"></p></center>
-			<audio controls>
-					<source src="" />
-			</audio>
-		</section>
-		
-		<footer > 
-
-			<table id="footerTab">
-				<tr> 
-					<td>
-						<table id="musicQueue">
-							<tr> 
-								<td class="moveUp"> </td>  
-								<td id="queue1"> </td> 
-								<td class="dMusic"> <button type="button" id="close1" onclick="deQueue(0)">x</button> </td> 
-							</tr>
-							<tr> 
-								<td class="moveUp"> <button type="button" id="moveUp2" onclick="queueSwapUp(1)">↑</button> </td> 
-								<td id="queue2"> </td> 
-								<td class="dMusic"> <button type="button" id="close2" onclick="deQueue(1)">x</button> </td> 
-							</tr>
-							<tr> 
-								<td class="moveUp"> <button type="button" id="moveUp3" onclick="queueSwapUp(2)">↑</button> </td>  
-								<td id="queue3"> </td> 
-								<td class="dMusic"> <button type="button" id="close3" onclick="deQueue(2)">x</button> </td> 
-							</tr>
-						</table>
-					</td>
-				</tr>
-			</table>
-		</footer>
-
+	<body>
+		<form method="post" action="/login">
+			<input type="text" name="username">
+			<input type="submit" value="Login">	
+		</form>
 	</body>
 </html>

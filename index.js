@@ -78,7 +78,7 @@ function introName(){
 		document.getElementById("welcomeMsg").innerHTML = name;
 	}
 	else{
-		window.location="http://www.google.com";
+		window.location="index.html";
 	}
 
 }
