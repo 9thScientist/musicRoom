@@ -101,3 +101,8 @@ audio {
 	background-color: #eeeeee;
 	width: 100%;
 }
+
+.musicButtons:hover{
+	background-color: #bebebe;
+	
+}
