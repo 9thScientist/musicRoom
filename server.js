@@ -9,12 +9,14 @@ var onUsers = [];
 app.use(urlencodedParser);
 app.use(express.static(__dirname));
 
+app.set('view engine', 'ejs');
+
 app.get('/', function(req, res) {
-	res.sendFile('./views/pages/index.html', {root: __dirname});
+	res.sendFile('views/pages/index.html', {root: __dirname});
 });
 
 app.post('/login', function(req, res) {
-	res.sendFile('./views/pages/main.html', {root: __dirname});
+	res.render ('pages/main');
 	
 	onUsers.push(req.body.username);
 	console.log (req.body.username + ' connected.');
