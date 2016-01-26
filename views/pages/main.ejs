@@ -3,10 +3,15 @@
 		<link href="../views/css/index.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="../views/scripts/index.js"> </script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 	</head>
 
 	<body onload="updateQueue();">
 
+		<script src="../node_modules/socket.io-client/socket.io.js"></script>
+		<script>
+  			var socket = io();
+		</script>
 
 		<header>
 				
