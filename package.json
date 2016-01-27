@@ -19,9 +19,9 @@
   "homepage": "https://github.com/9thScientist/musicRoom#readme",
   "dependencies": {
     "body-parser": "^1.14.2",
-    "cookie-parser": "^1.4.1",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
+    "express-session": "^1.13.0",
     "socket.io": "^1.4.4"
   }
 }

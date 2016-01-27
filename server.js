@@ -5,11 +5,11 @@ var io = require('socket.io')(http);
 var bodyParser = require('body-parser');
 var session = require('express-session');
 
-var urlencodedParser = bodyParser.urlencoded({extended: true});
-
-app.use(urlencodedParser);
-app.use(cookieParser());
-app.use(express.session({secret: '140e9masO85saiu!'}))
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(session({secret: '140e9masO85saiu!',
+				 resave: false,
+				 saveUninitialized: false
+				}))
 
 app.use(express.static(__dirname));
 app.set('view engine', 'ejs');
