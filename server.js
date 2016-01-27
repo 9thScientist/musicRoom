@@ -12,7 +12,8 @@ app.use(session({secret: '140e9masO85saiu!',
 				}));
 
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + '/public'));
+app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 var onUsers = ["Joana", "Jorge"];
@@ -37,7 +38,6 @@ app.post('/login', function(req, res) {
 		onUsers.push(session.username);
 	}
 	
-	consolo.log(session.id);
 	res.render ('pages/main', {onUsers});
 });
 
