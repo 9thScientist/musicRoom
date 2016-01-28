@@ -5,6 +5,7 @@ var io = require('socket.io')(http);
 var bodyParser = require('body-parser');
 var session = require('express-session');
 
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(session({secret: '140e9masO85saiu!',
 				 resave: false,
@@ -12,7 +13,7 @@ app.use(session({secret: '140e9masO85saiu!',
 				}));
 
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
@@ -35,7 +36,7 @@ app.post('/login', function(req, res) {
 
 	if (!session.username){
 		session.username = req.body.username;
-		onUsers.push(session.username);
+		//onUsers.push(session.username);
 	}
 	
 	res.render ('pages/main', {onUsers});
@@ -57,9 +58,15 @@ function isOnline(username) {
 io.on('connection', function(socket) {
 	var repeat = isOnline(session.username);
 	usersID[socket.id] = session.username;
-	
-	if (!repeat)
+
+	console.log ('Checking if ' + session.username + ' is already logged in...');
+
+	if (!repeat) { 
 		console.log(session.username + ' user connected.');
+		onUsers.push(session.username);
+	}
+	
+	console.log ('onUsers: ' + onUsers);
 
 	socket.on('disconnect', function() {
 		var username = usersID[socket.id];
