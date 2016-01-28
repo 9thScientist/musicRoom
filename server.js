@@ -25,22 +25,36 @@ var session;
 app.get('/', function(req, res) {
 	session = req.session;
 
-	if (session.username)
-		res.render('pages/main', {onUsers});
+//	if (session.username) {
+		if (isOnline(session.username)) res.sendFile(__dirname + '/sad.jpg'); //res.render('pages/main', {onUsers});
+		else res.sendFile(__dirname + '/views/pages/index.html')
+/*	}
 	else
-		res.sendFile(__dirname + '/views/pages/index.html');
+		res.sendFile(__dirname + '/views/pages/index.html'); */
+});
+
+app.get('/enter', function(req, res) {
+
+	onUsers.push(session.username);
+	res.render('pages/main', {onUsers});
 });
 
 app.post('/login', function(req, res) {
 	session = req.session;
 
-	if (!session.username){
-		session.username = req.body.username;
-		//onUsers.push(session.username);
-	}
-	
-	res.render ('pages/main', {onUsers});
+	session.username = req.body.username;
+
+	console.log ("New user: " + session.username + '\nOnline: ' + isOnline(session.username));
+
+	if (isOnline(session.username)) {
+		console.log(session.username + ' already logged in');
+		res.sendFile(__dirname + '/views/pages/index.html');  
+	} else {
+//		onUsers.push(session.username);
+		res.redirect('/enter');
+	}	
 });
+
 
 function isOnline(username) {
 	var repeat = false;
@@ -48,6 +62,7 @@ function isOnline(username) {
 	for (var sock in usersID){
 		if (usersID[sock] == username){
 			repeat = true;
+			console.log ('usersID['+ sock+']: ' + username);
 			break;
 		}
 	}
@@ -59,15 +74,11 @@ io.on('connection', function(socket) {
 	var repeat = isOnline(session.username);
 	usersID[socket.id] = session.username;
 
-	console.log ('Checking if ' + session.username + ' is already logged in...');
 
 	if (!repeat) { 
 		console.log(session.username + ' user connected.');
-		onUsers.push(session.username);
 	}
 	
-	console.log ('onUsers: ' + onUsers);
-
 	socket.on('disconnect', function() {
 		var username = usersID[socket.id];
 		delete usersID[socket.id];

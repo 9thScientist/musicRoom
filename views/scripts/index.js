@@ -72,6 +72,7 @@ function hide(){
 	}
 }
 
+
 /*
 function introName(){
 	var name = prompt("Username:");

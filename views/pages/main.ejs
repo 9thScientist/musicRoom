@@ -13,7 +13,7 @@
 		<title>My Music Chamber</title>
 	</head>
 
-	<body> 
+	<body onLoad=updateQueue();> 
 
 		<header>
 				
@@ -22,7 +22,7 @@
 
 		<nav>
 			<center> <h2> Online Users</h2> </center>
-		
+
 			<table id="userTable">
 				 <% include ../partials/users %>
 			</table>
