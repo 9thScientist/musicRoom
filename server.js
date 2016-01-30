@@ -20,39 +20,35 @@ app.set('view engine', 'ejs');
 var onUsers = ["Joana", "Jorge"];
 var usersID = {}; 
 
-var session;
+var connection;
 
 app.get('/', function(req, res) {
-	session = req.session;
+	connection = req.session;
 
-//	if (session.username) {
-		if (isOnline(session.username)) res.sendFile(__dirname + '/sad.jpg'); //res.render('pages/main', {onUsers});
-		else res.sendFile(__dirname + '/views/pages/index.html')
-/*	}
-	else
-		res.sendFile(__dirname + '/views/pages/index.html'); */
+	if (isOnline(connection.username)) res.sendFile(__dirname + '/sad.jpg'); //res.render('pages/main', {onUsers});
+	else res.sendFile(__dirname + '/views/pages/index.html')
 });
 
 app.get('/enter', function(req, res) {
 
-	onUsers.push(session.username);
+	connection = req.session;
+
 	res.render('pages/main', {onUsers});
 });
 
 app.post('/login', function(req, res) {
-	session = req.session;
+	connection = req.session;
 
-	session.username = req.body.username;
+	connection.username = req.body.username;
 
-	console.log ("New user: " + session.username + '\nOnline: ' + isOnline(session.username));
+	console.log ("New user: " + connection.username + '\nOnline: ' + isOnline(session.username));
 
-	if (isOnline(session.username)) {
-		console.log(session.username + ' already logged in');
-		res.sendFile(__dirname + '/views/pages/index.html');  
-	} else {
-//		onUsers.push(session.username);
-		res.redirect('/enter');
-	}	
+	if (isOnline(connection.username)) {
+		console.log(connection.username + ' already logged in');
+		req.session.username = undefined;
+		res.redirect('/', req, res);
+	} else 
+		res.redirect('/enter', req, res);
 });
 
 
@@ -62,7 +58,6 @@ function isOnline(username) {
 	for (var sock in usersID){
 		if (usersID[sock] == username){
 			repeat = true;
-			console.log ('usersID['+ sock+']: ' + username);
 			break;
 		}
 	}
@@ -71,12 +66,13 @@ function isOnline(username) {
 }
 
 io.on('connection', function(socket) {
-	var repeat = isOnline(session.username);
-	usersID[socket.id] = session.username;
+	var repeat = isOnline(connection.username);
+	usersID[socket.id] = connection.username;
 
 
-	if (!repeat) { 
-		console.log(session.username + ' user connected.');
+	if (!repeat) { 	
+		onUsers.push(connection.username);
+		console.log(connection.username + ' user connected.');
 	}
 	
 	socket.on('disconnect', function() {
