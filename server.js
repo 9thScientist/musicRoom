@@ -15,7 +15,7 @@ app.use(session({secret: '140e9masO85saiu!',
 
 app.use(express.static(__dirname));
 app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
 
 var onUsers = ["Joana", "Jorge"];
 var usersID = {}; 
@@ -33,7 +33,7 @@ app.get('/enter', function(req, res) {
 
 	connection = req.session;
 
-	res.render('pages/main', {onUsers});
+	res.sendFile(__dirname + '/views/pages/main.html');
 });
 
 app.post('/login', function(req, res) {
@@ -73,6 +73,7 @@ io.on('connection', function(socket) {
 	if (!repeat) { 	
 		onUsers.push(connection.username);
 		console.log(connection.username + ' user connected.');
+		io.sockets.emit('Update Users', onUsers);
 	}
 	
 	socket.on('disconnect', function() {
@@ -85,6 +86,7 @@ io.on('connection', function(socket) {
 			
 			onUsers.splice(ind, 1);
 			console.log(username + ' disconnected.');
+			io.sockets.emit('Update Users', onUsers);
 		}
 
 	});

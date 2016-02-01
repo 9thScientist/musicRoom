@@ -2,12 +2,20 @@
 	<head>
 		<link href="/views/css/index.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="/views/scripts/index.js"> </script>
+		<script type="text/javascript" src="ejs_production.js"></script>
+
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
         <script src="/node_modules/socket.io-client/socket.io.js"></script>
         <script>
             var socket = io();
-			updateQueue();
+			socket.on('Update Users', function(users) {
+				console.log (users);
+
+				var html = new EJS({url: '/views/partials/users.ejs'}).render({users});
+				document.getElementById('userTable').innerHTML = html;
+			});
+
         </script>
 
 		<title>My Music Chamber</title>
@@ -24,7 +32,6 @@
 			<center> <h2> Online Users</h2> </center>
 
 			<table id="userTable">
-				 <% include ../partials/users %>
 			</table>
 		
 		</nav>
