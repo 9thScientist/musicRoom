@@ -15,18 +15,19 @@ app.use(session({secret: '140e9masO85saiu!',
 
 app.use(express.static(__dirname));
 app.set('views', __dirname + '/views');
-//app.set('view engine', 'ejs');
 
-var onUsers = ["Joana", "Jorge"];
+var onUsers = [];
 var usersID = {}; 
+var pUser = 0;
 
 var connection;
 
 app.get('/', function(req, res) {
 	connection = req.session;
 
-	if (isOnline(connection.username)) res.sendFile(__dirname + '/sad.jpg'); //res.render('pages/main', {onUsers});
+	if (isOnline(connection.username)) res.sendFile(__dirname + '/sad.jpg');
 	else res.sendFile(__dirname + '/views/pages/index.html')
+
 });
 
 app.get('/enter', function(req, res) {
@@ -41,10 +42,7 @@ app.post('/login', function(req, res) {
 
 	connection.username = req.body.username;
 
-	console.log ("New user: " + connection.username + '\nOnline: ' + isOnline(session.username));
-
 	if (isOnline(connection.username)) {
-		console.log(connection.username + ' already logged in');
 		req.session.username = undefined;
 		res.redirect('/', req, res);
 	} else 
@@ -73,7 +71,7 @@ io.on('connection', function(socket) {
 	if (!repeat) { 	
 		onUsers.push(connection.username);
 		console.log(connection.username + ' user connected.');
-		io.sockets.emit('Update Users', onUsers);
+		io.sockets.emit('Update Users', onUsers, pUser);
 	}
 	
 	socket.on('disconnect', function() {
@@ -86,7 +84,7 @@ io.on('connection', function(socket) {
 			
 			onUsers.splice(ind, 1);
 			console.log(username + ' disconnected.');
-			io.sockets.emit('Update Users', onUsers);
+			io.sockets.emit('Update Users', onUsers, pUser);
 		}
 
 	});

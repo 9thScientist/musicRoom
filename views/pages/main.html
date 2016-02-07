@@ -9,10 +9,11 @@
         <script src="/node_modules/socket.io-client/socket.io.js"></script>
         <script>
             var socket = io();
-			socket.on('Update Users', function(users) {
+			socket.on('Update Users', function(users, puser) {
 				console.log (users);
+				console.log (puser);
 
-				var html = new EJS({url: '/views/partials/users.ejs'}).render({users});
+				var html = new EJS({url: '/views/partials/users.ejs'}).render({users: users, puser:  puser});
 				document.getElementById('userTable').innerHTML = html;
 			});
 
@@ -41,13 +42,10 @@
 			<center>	<h2> Songs </h2> </center>
 
 			<table id="musicTable">
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Vivaldi Four Seasons</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Under Pressure</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Fear of the Dark</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Friday</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Lose Yourself</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">High Hopes</button></td> </tr>
-				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Os Maridos das outras</button></td> </tr>
+				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Canon in D Major</button></td> </tr>
+				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Egmont Overture Finale</button></td> </tr>
+				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Motivator</button></td> </tr>
+				<tr> <td> <button type="button" class="musicButtons" onclick="addToQueue(this.innerHTML)">Pamgaea</button></td> </tr>
 			</table>
 				
 		</aside>

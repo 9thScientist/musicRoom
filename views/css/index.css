@@ -91,6 +91,11 @@ audio {
 	font-weight: bold;
 }
 
+.userPlaying {
+	color: #ff6600;
+	font-weight: bold;
+}
+
 .moveUp {
 	
 	width: 30px;	

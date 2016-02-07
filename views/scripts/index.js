@@ -1,12 +1,8 @@
 
-var queue = [];
+var queue = ["","",""];
 var queueSP = 0;
 const vazio = "";
 const maxQueue = 3;
-
-queue[0] = vazio;
-queue[1] = vazio;
-queue[2] = vazio;
 
 function updateQueue () {
 
@@ -72,15 +68,3 @@ function hide(){
 	}
 }
 
-
-/*
-function introName(){
-	var name = prompt("Username:");
-	if(name!=undefined){ 
-		document.getElementById("welcomeMsg").innerHTML = name;
-	}
-	else{
-		window.location="index.html";
-	}
-
-} */
