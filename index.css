@@ -1,0 +1,57 @@
+.navbar-custom {
+	background-color: #cf5230;
+}
+
+.navbar-brand {
+	color:white;
+}
+
+.navbar-brand:hover {
+	color:	#f59a44;
+}
+
+.queue-control {
+	background-color: #e3c598;
+}
+
+.music-name {
+	color: #6e352c;
+	font-size:17px;
+}
+
+body { 
+	padding-top: 65px; 
+}
+
+body > #musicQueue {
+/*	padding-top: 60px; */
+	background-color:#cf5230;
+
+	position: relative;
+/* margin-top: -180px; /* negative value of footer height 
+    height: 180px; */
+	clear:both;
+	padding-top:20px;
+}
+
+#workspace {
+	height:65% 
+}
+
+.album {
+	background-color: #e3c598;
+	margin: 10px;
+	padding: 10px;
+	height: 150px;
+}
+
+.album h2 {
+	font-weight: bold;
+}
+
+.playing {	
+	background-color: #e3c598;
+	border-radius:200px;
+	height:300px;
+	width: 300px;
+}
