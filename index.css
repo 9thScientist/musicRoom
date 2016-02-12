@@ -10,9 +10,34 @@
 	color:	#f59a44;
 }
 
+.btn-control {
+	width: 50px;
+	height: 50px;
+	border-radius:200px;
+}
+
+.container {
+    position: relative;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: -30px;
+
+}
+
+.top-right {
+    position: absolute;
+    font-size: 18px;
+    top: 8px;
+    right: -30px;
+
+}
+
 body { 
 	padding-top: 65px;
-	background-color: #FFAB8A;
+	background-color: #f3e6bc;
 }
 
 #music-queue-content {
@@ -39,15 +64,3 @@ body {
 	font-weight: bold;
 }
 
-.playing {	
-	background-color: #e3c598;
-	margin: auto;
-	border-radius:200px;
-	height:300px;
-	width: 300px;
-}
-
-.playing-text {
-	position: relative;
-	top: 35%;
-}
