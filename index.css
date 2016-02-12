@@ -1,5 +1,5 @@
 .navbar-custom {
-	background-image: url("images/wood.jpg");
+	background-color: #2a1811;
 }
 
 .navbar-brand {
@@ -12,7 +12,7 @@
 
 body { 
 	padding-top: 65px;
-	background-color: #FFAB8A;
+	background-color: #FFE9DF;
 }
 
 #music-queue-content {
@@ -28,6 +28,10 @@ body {
 	height:60%;
 }
 
+#playing {
+	margin-top: 50px; 
+}
+
 .album {
 	background-color: #e3c598;
 	margin: 10px;
@@ -37,14 +41,6 @@ body {
 
 .album h2 {
 	font-weight: bold;
-}
-
-.playing {	
-	background-color: #e3c598;
-	margin: auto;
-	border-radius:200px;
-	height:300px;
-	width: 300px;
 }
 
 .playing-text {
