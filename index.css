@@ -25,7 +25,7 @@ body {
 
 body > #musicQueue {
 /*	padding-top: 60px; */
-	background-color:#cf5230;
+	background-color: #9c2700;
 
 	position: relative;
 /* margin-top: -180px; /* negative value of footer height 
@@ -35,7 +35,7 @@ body > #musicQueue {
 }
 
 #workspace {
-	height:65% 
+	height:60% 
 }
 
 .album {
