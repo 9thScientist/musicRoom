@@ -1,5 +1,5 @@
 .navbar-custom {
-	background-color: #2a1811;
+	background-color: #461b0c;
 }
 
 .navbar-brand {
@@ -26,6 +26,20 @@ body {
 
 #workspace {
 	height:60%;
+}
+
+.col-md-2 * {
+	width: 100%;
+	margin: 0;
+}
+
+.list-group {
+	width: 100%;
+}
+
+.list-group-item {
+	background-color: #b67943;
+	width: 100%;
 }
 
 #playing {
