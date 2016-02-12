@@ -15,11 +15,13 @@ body {
 	background-color: #f7ecdd;
 }
 
-#musicQueue {
+#music-queue-content {
 	background-color: #9c2700;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	bottom: 20;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 #workspace {
