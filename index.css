@@ -1,5 +1,5 @@
 .navbar-custom {
-	background-color: #cf5230;
+	background-image: url("images/wood.jpg");
 }
 
 .navbar-brand {
@@ -12,20 +12,20 @@
 
 body { 
 	padding-top: 65px;
-	background-color: #f7ecdd;
+	background-color: #FFAB8A;
 }
 
 #music-queue-content {
-	background-color: #9c2700;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	background-image: url("images/wood.jpg");
+	padding-top: 13px;
+	padding-bottom: 13px;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 }
 
 #workspace {
-	height:60% 
+	height:60%;
 }
 
 .album {
