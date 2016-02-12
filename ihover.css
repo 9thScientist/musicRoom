@@ -21,6 +21,7 @@
   width: 100%;
   height: 100%;
   margin: auto;
+
 }
 
 .ih-item.circle {
@@ -66,8 +67,11 @@
   position: relative;
   width: 237px; /*default: 316x216*/
   height: 162px;
-/*  border: 8px solid #fff; */
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+/*  border: 8px solid #fff; 
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); */
+
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1.9);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6); */
 }
 .ih-item.square .info {
   position: absolute;

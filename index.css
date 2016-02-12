@@ -53,6 +53,24 @@ body {
 	height:60%;
 }
 
+.col-md-2 * {
+	width: 100%;
+	margin: 0;
+}
+
+.list-group {
+	width: 100%;
+}
+
+.list-group-item {
+	background-color: #b67943;
+	width: 100%;
+}
+
+#playing {
+	margin-top: 50px; 
+}
+
 .album {
 	background-color: #e3c598;
 	margin: 10px;
@@ -64,3 +82,10 @@ body {
 	font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+.playing-text {
+	position: relative;
+	top: 35%;
+}
+>>>>>>> 168fed0b14229e64c7f69da3cdcb07e04a26a634
