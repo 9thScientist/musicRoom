@@ -65,7 +65,7 @@
 
 .ih-item.square {
   position: relative;
-  width: 237px; /*default: 316x216*/
+  width: 162px; /*default: 316x216 old: 237px*/
   height: 162px;
 /*  border: 8px solid #fff; 
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); */
