@@ -20,6 +20,19 @@
 	border-radius:200px;
 }
 
+.btn-remove-queue {
+	position: absolute;
+	top: 8px;
+	right: 16px;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	padding: 6px 0;
+	font-size: 12px;
+	line-height: 1.42;
+	border-radius: 15px;
+}
+
 .container {
     position: relative;
 }
@@ -56,9 +69,9 @@
 	height: 100%;
 }
 
-body { 
+body {
 	padding-top: 50px;
-	background-color: #efe2d7; 
+	background-color: #efe2d7;
 }
 
 #music-queue-content {
@@ -72,11 +85,6 @@ body {
 
 #workspace {
 	height:72%;
-}
-
-.col-md-2 * {
-	width: 100%;
-	margin: 0;
 }
 
 .list-group {
@@ -96,7 +104,7 @@ body {
 
 .list-group-item {
 	text-align: left;
-	background-color: #efe2d7; 
+	background-color: #efe2d7;
 	border: none;
 	width: 100%;
 }
@@ -111,7 +119,7 @@ body {
 }
 
 #playing {
-	margin-top: 2%; 
+	margin-top: 2%;
 }
 
 .album {
