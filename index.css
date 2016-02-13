@@ -21,18 +21,17 @@
 }
 
 .top-left {
-    position: absolute;
-    top: 8px;
-    left: -30px;
-
+	position: absolute;
+	top: 105%;
+	left: 50%;
+	display: inline;
 }
 
 .top-right {
-    position: absolute;
-    font-size: 18px;
-    top: 8px;
-    right: -30px;
-
+	position: absolute;
+	top: 105%;
+	left: 40%;
+	display: inline;
 }
 
 body { 
@@ -68,7 +67,7 @@ body {
 }
 
 #playing {
-	margin-top: 50px; 
+	margin-top: 2%; 
 }
 
 .album {
@@ -82,10 +81,7 @@ body {
 	font-weight: bold;
 }
 
-<<<<<<< HEAD
-=======
 .playing-text {
 	position: relative;
 	top: 35%;
 }
->>>>>>> 168fed0b14229e64c7f69da3cdcb07e04a26a634
