@@ -2191,10 +2191,12 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1.9);
 .ih-item.circle.effect17 .info p {
   color: #bbb;
   padding: 10px 5px;
+  padding-top: 100px;
   font-style: italic;
   margin: 0 30px;
-  font-size: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+ /* border-top: 1px solid rgba(255, 255, 255, 0.5); */
+
   opacity: 0;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
