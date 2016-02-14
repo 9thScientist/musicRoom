@@ -1,0 +1,1 @@
+{"version":3,"file":"song.service.js","sourceRoot":"","sources":["song.service.ts"],"names":["SongService","SongService.constructor","SongService.getSongs"],"mappings":";;;;;;;;;;;;;;;;;;;;;YAGA;gBAAAA;gBAKAC,CAACA;gBAHED,8BAAQA,GAARA;oBACGE,MAAMA,CAACA,kBAAKA,CAACA;gBAChBA,CAACA;gBAJJF;oBAACA,iBAAUA,EAAEA;;gCAKZA;gBAADA,kBAACA;YAADA,CAACA,AALD,IAKC;YALD,qCAKC,CAAA"}

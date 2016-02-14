@@ -1,18 +1,6 @@
-import {Component} from 'angular2/core';
-
-interface Song {
-   name: string;
-   artist: string;
-   albumCover: string;
-   album: string;
-}
-
-var SONGS : Song[] = [
-    {"name": "Atom Heart Mother", "artist": "Pink Floyd", "albumCover": "ahm.jpg", "album": "Atom Heart Mother"},
-    {"name": "Stairway", "artist": "Led Zeppelin", "albumCover": "mothership.jpg", "album": "Mothership"},
-    {"name": "Under Pressure", "artist": "Queen" , "albumCover": "hotspace.jpg", "album": "Hot Space"},
-    {"name": "Snap Out of It", "artist": "Arctic Monkeys", "albumCover": "am.png", "album": "AM"}
-]
+import {Song} from './song'
+import {SongService} from './song.service';
+import {Component, OnInit} from 'angular2/core';
 
 @Component({
    selector: 'song-list',
@@ -26,10 +14,21 @@ var SONGS : Song[] = [
                <h6>{{song.artist}} - {{song.album}}</h6>\
          </li>\
       </ul>\
-   </div>   '
+   </div>   ',
+   providers: [SongService]
 })
 
 export class AppComponent {
-   public songs = SONGS;
+   songs: Song[];
 
+   constructor(private _songService: SongService) { }
+
+   getSongs() {
+      this.songs = this._songService.getSongs();
+   }
+
+   ngOnInit() {
+      this.getSongs();
+      console.log (this.songs)
+   }
 }

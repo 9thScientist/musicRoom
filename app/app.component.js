@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1) {
+System.register(['./song.service', 'angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,24 +8,28 @@ System.register(['angular2/core'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var SONGS, AppComponent;
+    var song_service_1, core_1;
+    var AppComponent;
     return {
         setters:[
+            function (song_service_1_1) {
+                song_service_1 = song_service_1_1;
+            },
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            SONGS = [
-                { "name": "Atom Heart Mother", "artist": "Pink Floyd", "albumCover": "ahm.jpg", "album": "Atom Heart Mother" },
-                { "name": "Stairway", "artist": "Led Zeppelin", "albumCover": "mothership.jpg", "album": "Mothership" },
-                { "name": "Under Pressure", "artist": "Queen", "albumCover": "hotspace.jpg", "album": "Hot Space" },
-                { "name": "Snap Out of It", "artist": "Arctic Monkeys", "albumCover": "am.png", "album": "AM" }
-            ];
             AppComponent = (function () {
-                function AppComponent() {
-                    this.songs = SONGS;
+                function AppComponent(_songService) {
+                    this._songService = _songService;
                 }
+                AppComponent.prototype.getSongs = function () {
+                    this.songs = this._songService.getSongs();
+                };
+                AppComponent.prototype.ngOnInit = function () {
+                    this.getSongs();
+                    console.log(this.songs);
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'song-list',
@@ -39,9 +43,10 @@ System.register(['angular2/core'], function(exports_1) {
                <h6>{{song.artist}} - {{song.album}}</h6>\
          </li>\
       </ul>\
-   </div>   '
+   </div>   ',
+                        providers: [song_service_1.SongService]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [song_service_1.SongService])
                 ], AppComponent);
                 return AppComponent;
             })();
