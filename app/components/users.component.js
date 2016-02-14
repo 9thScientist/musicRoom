@@ -1,4 +1,4 @@
-System.register(['./users/user.service', 'angular2/core'], function(exports_1) {
+System.register(['../services/user.service', 'angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -25,7 +25,6 @@ System.register(['./users/user.service', 'angular2/core'], function(exports_1) {
                 }
                 UsersComponent.prototype.getUsers = function () {
                     this.users = this._userService.getUsers();
-                    console.log(this.users);
                 };
                 UsersComponent.prototype.ngOnInit = function () {
                     this.getUsers();
@@ -33,7 +32,7 @@ System.register(['./users/user.service', 'angular2/core'], function(exports_1) {
                 UsersComponent = __decorate([
                     core_1.Component({
                         selector: 'users-list',
-                        templateUrl: '/app/users/users.html',
+                        templateUrl: '/app/templates/users.html',
                         providers: [user_service_1.UserService]
                     }), 
                     __metadata('design:paramtypes', [user_service_1.UserService])

@@ -1,10 +1,10 @@
-import {Song} from './songs/song';
-import {SongService} from './songs/song.service';
+import {Song} from '../interfaces/song';
+import {SongService} from '../services/song.service';
 import {Component, OnInit} from 'angular2/core';
 
 @Component({
    selector: 'song-list',
-   templateUrl: '/app/songs/songs.html',
+   templateUrl: '/app/templates/songs.html',
    providers: [SongService]
 })
 

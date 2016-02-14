@@ -1,4 +1,4 @@
-System.register(['./songs/song.service', 'angular2/core'], function(exports_1) {
+System.register(['../services/song.service', 'angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -32,7 +32,7 @@ System.register(['./songs/song.service', 'angular2/core'], function(exports_1) {
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'song-list',
-                        templateUrl: '/app/songs/songs.html',
+                        templateUrl: '/app/templates/songs.html',
                         providers: [song_service_1.SongService]
                     }), 
                     __metadata('design:paramtypes', [song_service_1.SongService])

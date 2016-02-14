@@ -1,4 +1,4 @@
-import {USERS} from './mock-users';
+import {USERS} from '../mock-users';
 import {Injectable} from 'angular2/core';
 
 @Injectable()

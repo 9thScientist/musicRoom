@@ -1,4 +1,4 @@
-import {Song} from './song';
+import {Song} from './interfaces/song';
 
 export var SONGS: Song[] = [
    {"name": "Time is Running Out", "artist": "Muse", "albumCover": "resistance.jpg", "album": "The Resistance"},

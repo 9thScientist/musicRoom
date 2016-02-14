@@ -1,6 +1,6 @@
 import {bootstrap} from 'angular2/platform/browser';
-import {AppComponent} from './songs.component';
-import {UsersComponent} from './users.component';
+import {UsersComponent} from './components/users.component';
+import {AppComponent} from './components/songs.component';
 
 bootstrap(AppComponent);
 bootstrap(UsersComponent);
