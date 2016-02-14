@@ -1,87 +1,48 @@
-
+body {
+	padding-top: 50px;
+	background-color: #efe2d7;
+}
 
 .navbar {
 	margin-bottom: 0;
-}
-
-.navbar-custom {
 	background-color: #321c10;
 }
 
 .navbar-brand {
 	color:white;
+	cursor: hand;
 }
 
 .navbar-brand:hover {
 	color:	#f59a44;
 }
 
-.btn-control {
-	width: 50px;
-	height: 50px;
-	border-radius:200px;
+#workspace {
+	height:69%;
 }
 
-.btn-remove-queue {
-	position: absolute;
-	top: 8px;
-	right: 16px;
-	height: 30px;
-	width: 30px;
-	text-align: center;
-	padding: 6px 0;
-	font-size: 12px;
-	line-height: 1.42;
-	border-radius: 15px;
+.content {
+	height: 100%;
 }
 
-.anex-left{
+.content > * {
+	height: 100%;
+}
+
+#users {
 	padding-left: 0;
-}
-
-.container {
-    position: relative;
-}
-
-.mute {
-	position: absolute;
-	top: 105%;
-	left: 51%;
-	display: inline;
-}
-
-.col-md-3 {
-	padding-right: 0;
-	padding-left: 0;
-}
-
-#musics {
-	height: 300px;
-	overflow: auto;
 }
 
 .users-col {
-	opacity: 12;
-	padding-right: 3%;
 	padding-left: 10px;
 	padding-top: 10px;
 	font-weight: bold;
 	text-align: left;
-	opacity: 1;
-	border-bottom: 0;
-	border-top: 0;12
 	background-color: #f7f0eb;
 	border-right: 2px solid #d7cbc1;
 	width: 100%;
 	height: 100%;
-
-	-webkit-box-shadow: inset 0px 2px 97px -54px rgba(50,28,16,1);
-	-moz-box-shadow: inset 0px 2px 97px -54px rgba(50,28,16,1);
 	box-shadow: inset 0px 2px 97px -54px rgba(50,28,16,1);
-}
-
-.username {
-margin-bottom: 0;
 }
 
 .user-hr {
@@ -90,41 +51,15 @@ margin-bottom: 0;
 	border:1px solid #d7cbc1;
 }
 
-.skip {
-	position: absolute;
-	top: 105%;
-	left: 44%;
-	display: inline;
-}
-
-.content {
-	height: 100%;
+.playing {
+	top: 7%;
+	left: 9%;
 }
 
 #songs {
 	height: 100%;
 	padding-left: 3%;
-}
-
-body {
-	padding-top: 50px;
-	background-color: #efe2d7;
-}
-
-#music-queue-content {
-	background-image: url("images/wood.jpg");
-	padding-top: 13px;
-	padding-bottom: 13px;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	-webkit-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
-	-moz-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
-	box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
-}
-
-#workspace {
-	height:69%;
+	padding-right: 0;
 }
 
 .songs-col {
@@ -132,6 +67,7 @@ body {
 	height: 100%;
 	overflow: auto;
 	border-left: 2px solid #d7cbc1;
+	margin-bottom: 0px;
 }
 
 .album-min {
@@ -153,45 +89,37 @@ body {
 	border-top-right-radius: 0;
 }
 
-
-.music-details {
+.songs-col li {
 	text-align: left;
 	background-color: #efe2d7;
 	border: none;
 	width: 100%;
+	cursor: hand;
 }
 
-.music-details:hover {
+.songs-col li:hover {
 	background-color: #c99d77;
 }
 
-.music-details h5 {
+.songs-col li h5 {
 	font-weight: bold;
 	margin: 5px 0px 3px 50px;
 	padding-left: 18px;
 }
 
-.music-details h6 {
+.songs-col li h6 {
 	margin: 5px 0px 3px 50px;
 	padding-left: 18px;
 }
 
-#playing {
-	margin-top: 2%;
-}
-
-.album {
-	background-color: #e3c598;
-	margin: 10px;
-	padding: 10px;
-	height: 150px;
-}
-
-.album h2 {
-	font-weight: bold;
-}
-
-.playing-text {
-	position: relative;
-	top: 35%;
+#music-queue-content {
+	background-image: url("images/wood.jpg");
+	padding-top: 13px;
+	padding-bottom: 13px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	-webkit-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
+	-moz-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
+	box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
 }
