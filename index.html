@@ -43,9 +43,13 @@
 
 		<div id="workspace" class="container-fluid text-center">
 			<div class="row content">
-				<div id="users" class="col-md-2 col-sm-2 anex-left">
-<!--					<h2>Users</h2> -->
-					<ul class="list-group users-col">
+				<div id="users" class="col-md-2 col-sm-2 anex-left ">
+
+					<users-list class="text-center">
+						<p> Loading users... </p>
+						<i class="fa fa-circle-o-notch fa-spin"></i>
+					</users-list>
+<!--					<ul class="list-group users-col">
 						<p class="user"> Maria </p>          <hr class="user-hr"/>
 						<p class="user"> Joana </p>          <hr class="user-hr"/>
 						<p class="user"> Alberto </p>        <hr class="user-hr"/>
@@ -54,7 +58,7 @@
 						<p class="user"> Manuel </p>         <hr class="user-hr"/>
 						<p class="user"> Dona Ondina </p>        <hr class="user-hr"/>
 
-					</ul>
+					</ul> -->
 				</div>
 
 				<div id="playing" class="col-md-7 col-sm-7">
@@ -75,7 +79,14 @@
 					</a></div>
 				</div>
 
-				<song-list> Loading songs...</song-list>
+				<div id="songs" class="col-md-3 col-sm-3">
+					<ul class="list-group songs-col">
+						<song-list class="text-center">
+							<p> Loading songs... </p>
+							<i class="fa fa-circle-o-notch fa-spin"></i>
+						</song-list>
+					</ul>
+				</div>
 
 			</div>
 		</div>

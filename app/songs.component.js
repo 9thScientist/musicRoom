@@ -1,4 +1,4 @@
-System.register(['./song.service', 'angular2/core'], function(exports_1) {
+System.register(['./songs/song.service', 'angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -28,22 +28,11 @@ System.register(['./song.service', 'angular2/core'], function(exports_1) {
                 };
                 AppComponent.prototype.ngOnInit = function () {
                     this.getSongs();
-                    console.log(this.songs);
                 };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'song-list',
-                        template: '\
-   <div id="songs" class="col-md-3 col-sm-3">\
-      <ul class="list-group songs-col">\
-\
-         <li *ngFor="#song of songs" class="list-group-item music-details">\
-            <img class="album-min" src="images/{{song.albumCover}}"/>\
-               <h5>{{song.name}}</h5>\
-               <h6>{{song.artist}} - {{song.album}}</h6>\
-         </li>\
-      </ul>\
-   </div>   ',
+                        templateUrl: '/app/songs/songs.html',
                         providers: [song_service_1.SongService]
                     }), 
                     __metadata('design:paramtypes', [song_service_1.SongService])
@@ -54,4 +43,4 @@ System.register(['./song.service', 'angular2/core'], function(exports_1) {
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=songs.component.js.map
