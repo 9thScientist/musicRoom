@@ -18,7 +18,14 @@ body {
 }
 
 #workspace {
-	height:69%;
+	/* Firefox */
+height: -moz-calc(100% - 176px);
+/* WebKit */
+height: -webkit-calc(100% - 176px);
+/* Opera */
+height: -o-calc(100% - 176px);
+/* Standard */
+height: calc(100% - 176px);
 }
 
 .content {
@@ -31,6 +38,7 @@ body {
 
 #users {
 	padding-left: 0;
+	cursor: default;;
 }
 
 .users-col {
@@ -118,6 +126,7 @@ body {
 	padding-bottom: 13px;
 	position: absolute;
 	bottom: 0;
+	height: 176px; /* O 140 não quer isto, mas eu quero! */
 	width: 100%;
 	-webkit-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
 	-moz-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
