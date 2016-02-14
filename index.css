@@ -118,6 +118,9 @@ body {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	-webkit-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
+	-moz-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
+	box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
 }
 
 #workspace {
