@@ -44,15 +44,11 @@
 		<div id="workspace" class="container-fluid text-center">
 			<div class="row content">
 				<div id="users" class="col-md-2 col-sm-2">
-					<ul class="list-group users-col">
-						<p> Maria </p>       <hr class="user-hr"/>
-						<p> Joana </p>       <hr class="user-hr"/>
-						<p> Alberto </p>     <hr class="user-hr"/>
-						<p> João </p>        <hr class="user-hr"/>
-						<p> Joaquim </p>     <hr class="user-hr"/>
-						<p> Manuel </p>      <hr class="user-hr"/>
-						<p> Dona Ondina </p> <hr class="user-hr"/>
-					</ul>
+
+					<users-list class="text-center">
+						<p> Loading users... </p>
+						<i class="fa fa-circle-o-notch fa-spin"></i>
+					</users-list>
 				</div>
 
 				<div class="col-md-7 col-sm-7">
@@ -65,7 +61,14 @@
 					</a></div>
 				</div>
 
-				<song-list> Loading songs...</song-list>
+				<div id="songs" class="col-md-3 col-sm-3">
+					<ul class="list-group songs-col">
+						<song-list class="text-center">
+							<p> Loading songs... </p>
+							<i class="fa fa-circle-o-notch fa-spin"></i>
+						</song-list>
+					</ul>
+				</div>
 			</div>
 		</div>
 

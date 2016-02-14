@@ -1,0 +1,5 @@
+<li *ngFor="#song of songs" class="list-group-item music-details">
+  <img class="album-min" src="images/{{song.albumCover}}"/>
+  <h5>{{song.name}}</h5>
+  <h6>{{song.artist}} - {{song.album}}</h6>
+</li>
