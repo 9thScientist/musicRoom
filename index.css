@@ -4,10 +4,6 @@ body {
 	height: 100%;
 }
 
-.album-controls {
-	width: 100%;
-}
-
 .navbar {
 	margin-bottom: 0;
 	background-color: #321c10;
@@ -131,9 +127,40 @@ height: calc(100% - 176px);
 	padding-bottom: 13px;
 	position: absolute;
 	bottom: 0;
-	height: 176px; /* O 140 não quer isto, mas eu quero! */
+	
 	width: 100%;
 	-webkit-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
 	-moz-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
 	box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
+}
+
+
+.album-controls {
+	position: absolute;
+	width: 100%;
+	opacity: 0.6;
+	bottom: 5px;
+}
+
+.queue-button {
+	display: inline;
+}
+
+.queue-button:hover {
+	border: 1px solid white;
+}
+
+.left-arrow {
+	padding: 3px;
+	text-align: left;
+}
+
+.right-arrow {
+	padding: 3px;
+	text-align: right;
+}
+
+.cancel-button {
+	padding: 14px 2px 4px 2px;
+	text-align: center;
 }
