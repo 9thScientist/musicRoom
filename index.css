@@ -151,27 +151,35 @@ height: calc(100% - 176px);
 	width: 100%;
 	opacity: 0.6;
 	bottom: 5px;
+	left: 5px;
 }
 
 .queue-button {
 	display: inline;
+	padding: 6px 4px;
 }
 
 .queue-button:hover {
-	border: 1px solid white;
+	background-color: darkgray;
+	border-radius: 5px;
+}
+
+.queue-button:active {
+	background-color: gray;
+	border-radius: 5px;
 }
 
 .left-arrow {
-	padding: 3px;
 	text-align: left;
+	padding-right: 3px;
 }
 
 .right-arrow {
-	padding: 3px;
 	text-align: right;
+	padding-left: 3px;
 }
 
 .cancel-button {
-	padding: 14px 2px 4px 2px;
 	text-align: center;
+	padding: 0px 2px;
 }
