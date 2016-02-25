@@ -2,6 +2,16 @@ body {
 	padding-top: 50px;
 	background-color: #efe2d7;
 	height: 100%;
+	min-width: 1000px;
+}
+
+.slide-text {
+font-family:Helvetica, sans-serif;
+font-size:17px;
+line-height:1.3em;
+background-color: #111111
+color: #fff;
+
 }
 
 .navbar {
@@ -127,7 +137,7 @@ height: calc(100% - 176px);
 	padding-bottom: 13px;
 	position: absolute;
 	bottom: 0;
-	
+
 	width: 100%;
 	-webkit-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
 	-moz-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
