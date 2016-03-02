@@ -29,7 +29,7 @@ color: #fff;
 }
 
 #workspace {
-	/* Firefox */
+/* Firefox */
 height: -moz-calc(100% - 176px);
 /* WebKit */
 height: -webkit-calc(100% - 176px);
@@ -118,6 +118,11 @@ height: calc(100% - 176px);
 
 .songs-col li:hover {
 	background-color: #c99d77;
+}
+
+.songs-col li:active {
+	background-color: #ffebc9 ; 
+
 }
 
 .songs-col li h5 {
