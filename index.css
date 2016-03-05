@@ -142,7 +142,7 @@ height: calc(100% - 176px);
 	padding-bottom: 13px;
 	position: absolute;
 	bottom: 0;
-
+	min-height: 176px;
 	min-width: 800px;
 	width: 100%;
 	-webkit-box-shadow: inset 0px 17px 35px -7px rgba(0,0,0,0.91);
